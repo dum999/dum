@@ -13,7 +13,7 @@ AppDelegate::AppDelegate()
 
 AppDelegate::~AppDelegate()
 {
-    SimpleAudioEngine::end();
+    //SimpleAudioEngine::end();
 }
 
 bool AppDelegate::initInstance()
@@ -115,10 +115,9 @@ bool AppDelegate::applicationDidFinishLaunching()
 	pDirector->setAnimationInterval(1.0 / 60);
 
     CCScene * pScene = CCScene::node();
-    //CCLayer * pLayer = new TestController();
-    //pLayer->autorelease();
+    CCLayer * pLayer = CCLayerColor::layerWithColor(ccc4(255,0,0,255));
 
-    //pScene->addChild(pLayer);
+    pScene->addChild(pLayer);
 	pDirector->runWithScene(pScene);
 
     return true;
