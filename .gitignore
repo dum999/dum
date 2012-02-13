@@ -1,0 +1,11 @@
+*.mode1v3
+*.pbxuser
+*.xcworkspace
+xcuserdata/
+build/
+.metadata/
+.settings/
+bin/
+gen/
+.hg/
+*.DS_Store
