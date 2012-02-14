@@ -16,7 +16,8 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH)/../cocos2dx \
 LOCAL_LDLIBS := -L$(call host-path, $(LOCAL_PATH)/android/libs/$(TARGET_ARCH_ABI)) \
                 -lGLESv1_CM \
                 -lcocos2d -llog -lcocosdenshion \
-                -L$(call host-path, $(LOCAL_PATH)/../cocos2dx/platform/third_party/android/libraries/$(TARGET_ARCH_ABI))
+                -lbox2d -lchipmunk \
+                -L$(call host-path, $(LOCAL_PATH)/../cocos2dx/platform/third_party/android/libraries/$(TARGET_ARCH_ABI)) -lcurl
             
 include $(BUILD_SHARED_LIBRARY)
                    
