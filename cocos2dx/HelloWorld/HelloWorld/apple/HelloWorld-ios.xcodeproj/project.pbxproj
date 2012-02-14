@@ -181,6 +181,7 @@
 		B1BF7BF414EA039C00FD998B /* b2Rope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1BF7B9814EA039C00FD998B /* b2Rope.cpp */; };
 		B1BF7BF514EA039C00FD998B /* b2Rope.h in Headers */ = {isa = PBXBuildFile; fileRef = B1BF7B9914EA039C00FD998B /* b2Rope.h */; };
 		B1BF7BF614EA03DB00FD998B /* libbox2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BF7B1114EA031D00FD998B /* libbox2d.a */; };
+		B1BF7BF914EA289000FD998B /* Hello.png in Resources */ = {isa = PBXBuildFile; fileRef = B1BF7BF814EA289000FD998B /* Hello.png */; };
 		B1C9744714E8B55E008CFC1A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C9744614E8B55E008CFC1A /* UIKit.framework */; };
 		B1C9744914E8B55E008CFC1A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C9744814E8B55E008CFC1A /* Foundation.framework */; };
 		B1C9744B14E8B55E008CFC1A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C9744A14E8B55E008CFC1A /* CoreGraphics.framework */; };
@@ -603,6 +604,7 @@
 		B1BF7B7A14EA039C00FD998B /* b2WheelJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2WheelJoint.h; sourceTree = "<group>"; };
 		B1BF7B9814EA039C00FD998B /* b2Rope.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2Rope.cpp; sourceTree = "<group>"; };
 		B1BF7B9914EA039C00FD998B /* b2Rope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2Rope.h; sourceTree = "<group>"; };
+		B1BF7BF814EA289000FD998B /* Hello.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hello.png; sourceTree = "<group>"; };
 		B1C9744214E8B55E008CFC1A /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C9744614E8B55E008CFC1A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B1C9744814E8B55E008CFC1A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -1212,16 +1214,33 @@
 			path = Rope;
 			sourceTree = "<group>";
 		};
-		B1C9743714E8B55E008CFC1A = {
+		B1BF7BF714EA289000FD998B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B1C9748A14E8C07B008CFC1A /* HelloWorld */,
-				B1C9744C14E8B55E008CFC1A /* ios */,
-				B1C9747914E8C056008CFC1A /* Resources */,
+				B1BF7BF814EA289000FD998B /* Hello.png */,
+			);
+			name = Resources;
+			path = ../Res;
+			sourceTree = "<group>";
+		};
+		B1BF7BFA14EA28B400FD998B /* Libs */ = {
+			isa = PBXGroup;
+			children = (
 				B1C974E014E8C6A6008CFC1A /* cocos2dx */,
 				B14038B414E8F8C10058FC97 /* CocosDenshion */,
 				B1BF7A7214EA007800FD998B /* chipmunk */,
 				B1BF7B1314EA031D00FD998B /* Box2D */,
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
+		B1C9743714E8B55E008CFC1A = {
+			isa = PBXGroup;
+			children = (
+				B1C9748A14E8C07B008CFC1A /* HelloWorld */,
+				B1BF7BF714EA289000FD998B /* Resources */,
+				B1C9744C14E8B55E008CFC1A /* ios */,
+				B1BF7BFA14EA28B400FD998B /* Libs */,
 				B1C9744514E8B55E008CFC1A /* Frameworks */,
 				B1C9744314E8B55E008CFC1A /* Products */,
 			);
@@ -1263,6 +1282,7 @@
 				B140388B14E8E2560058FC97 /* RootViewController.mm */,
 				B1C9747114E8BEBE008CFC1A /* AppController.h */,
 				B1C9747214E8BEBE008CFC1A /* AppController.mm */,
+				B1C9747914E8C056008CFC1A /* Resources */,
 				B1C9744D14E8B55E008CFC1A /* Supporting Files */,
 			);
 			name = ios;
@@ -1293,7 +1313,7 @@
 				B1C9748114E8C056008CFC1A /* iTunesArtwork */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		B1C9748A14E8C07B008CFC1A /* HelloWorld */ = {
 			isa = PBXGroup;
@@ -2124,6 +2144,7 @@
 				B1C9748714E8C056008CFC1A /* Icon.png in Resources */,
 				B1C9748814E8C056008CFC1A /* Icon@2x.png in Resources */,
 				B1C9748914E8C056008CFC1A /* iTunesArtwork in Resources */,
+				B1BF7BF914EA289000FD998B /* Hello.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

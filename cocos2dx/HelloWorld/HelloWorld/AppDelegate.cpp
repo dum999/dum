@@ -114,8 +114,13 @@ bool AppDelegate::applicationDidFinishLaunching()
 	// set FPS. the default value is 1.0/60 if you don't call this
 	pDirector->setAnimationInterval(1.0 / 60);
 
+    CCSize size = pDirector->getWinSize();
+    
     CCScene * pScene = CCScene::node();
     CCLayer * pLayer = CCLayerColor::layerWithColor(ccc4(255,0,0,255));
+    CCSprite * pSpr = CCSprite::spriteWithFile("Hello.png");
+    pSpr->setPosition(ccp(size.width/2,size.height/2));
+    pLayer->addChild(pSpr);
 
     pScene->addChild(pLayer);
 	pDirector->runWithScene(pScene);
