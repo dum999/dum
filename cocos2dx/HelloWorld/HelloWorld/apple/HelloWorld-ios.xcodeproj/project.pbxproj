@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B11FC8CE1B03019400C8E3B2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B11FC8CD1B03019400C8E3B2 /* Default-568h@2x.png */; };
 		B140388C14E8E2560058FC97 /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = B140388B14E8E2560058FC97 /* RootViewController.mm */; };
 		B140388E14E8E5DB0058FC97 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C9861914E8CCA3008CFC1A /* OpenGLES.framework */; };
 		B140388F14E8E5F10058FC97 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C9861614E8CC7B008CFC1A /* QuartzCore.framework */; };
@@ -434,6 +435,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B11FC8CD1B03019400C8E3B2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B140388A14E8E2560058FC97 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = SOURCE_ROOT; };
 		B140388B14E8E2560058FC97 /* RootViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RootViewController.mm; sourceTree = SOURCE_ROOT; };
 		B140389114E8E6240058FC97 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -1237,6 +1239,7 @@
 		B1C9743714E8B55E008CFC1A = {
 			isa = PBXGroup;
 			children = (
+				B11FC8CD1B03019400C8E3B2 /* Default-568h@2x.png */,
 				B1C9748A14E8C07B008CFC1A /* HelloWorld */,
 				B1BF7BF714EA289000FD998B /* Resources */,
 				B1C9744C14E8B55E008CFC1A /* ios */,
@@ -1354,17 +1357,9 @@
 				B1C97E2714E8C801008CFC1A /* textures */,
 				B1C97E2C14E8C801008CFC1A /* tileMap_parallax_nodes */,
 				B1C97E3314E8C801008CFC1A /* touch_dispatcher */,
-				B1C974E114E8C6A6008CFC1A /* Supporting Files */,
 			);
 			name = cocos2dx;
 			path = ../../cocos2dx;
-			sourceTree = "<group>";
-		};
-		B1C974E114E8C6A6008CFC1A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		B1C974E914E8C800008CFC1A /* actions */ = {
@@ -2106,7 +2101,7 @@
 		B1C9743914E8B55E008CFC1A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = Jirapong;
 			};
 			buildConfigurationList = B1C9743C14E8B55E008CFC1A /* Build configuration list for PBXProject "HelloWorld-ios" */;
@@ -2136,6 +2131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1C9747814E8BEE7008CFC1A /* InfoPlist.strings in Resources */,
+				B11FC8CE1B03019400C8E3B2 /* Default-568h@2x.png in Resources */,
 				B1C9748214E8C056008CFC1A /* Default.png in Resources */,
 				B1C9748314E8C056008CFC1A /* Icon-72.png in Resources */,
 				B1C9748414E8C056008CFC1A /* Icon-Small-50.png in Resources */,
@@ -2444,10 +2440,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					"$(ARCHS_STANDARD_32_BIT)",
-				);
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -2470,11 +2462,11 @@
 					"\"$(SRCROOT)/../..\"",
 					"\"$(SRCROOT)/../../cocos2dx/platform/third_party/ios\"",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv6 armv7 i386";
 			};
 			name = Debug;
 		};
@@ -2482,10 +2474,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					"$(ARCHS_STANDARD_32_BIT)",
-				);
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -2505,13 +2493,12 @@
 					"\"$(SRCROOT)/../..\"",
 					"\"$(SRCROOT)/../../cocos2dx/platform/third_party/ios\"",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "armv6 armv7 i386";
 			};
 			name = Release;
 		};
@@ -2576,6 +2563,7 @@
 				B1BF7A7914EA007800FD998B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B1BF7B1914EA031D00FD998B /* Build configuration list for PBXNativeTarget "box2d" */ = {
 			isa = XCConfigurationList;
@@ -2584,6 +2572,7 @@
 				B1BF7B1B14EA031D00FD998B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B1C9743C14E8B55E008CFC1A /* Build configuration list for PBXProject "HelloWorld-ios" */ = {
 			isa = XCConfigurationList;
