@@ -19,6 +19,9 @@
 		B1BCB9A21E910CCD00F30050 /* StackHideControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCB9A11E910CCD00F30050 /* StackHideControlViewController.swift */; };
 		B1BCB9A61E91136900F30050 /* TableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1BCB9A41E91136900F30050 /* TableView.storyboard */; };
 		B1BCB9AA1E9113ED00F30050 /* TableViewCellStyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCB9A91E9113ED00F30050 /* TableViewCellStyleViewController.swift */; };
+		B1BCB9AD1E9138A000F30050 /* ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1BCB9AB1E9138A000F30050 /* ViewController.storyboard */; };
+		B1BCB9B01E913C8A00F30050 /* Container.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1BCB9AF1E913C8A00F30050 /* Container.storyboard */; };
+		B1BCB9B61E9144B900F30050 /* SwitchContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCB9B51E9144B900F30050 /* SwitchContainerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		B1BCB9A11E910CCD00F30050 /* StackHideControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackHideControlViewController.swift; sourceTree = "<group>"; };
 		B1BCB9A51E91136900F30050 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TableView.storyboard; sourceTree = "<group>"; };
 		B1BCB9A91E9113ED00F30050 /* TableViewCellStyleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellStyleViewController.swift; sourceTree = "<group>"; };
+		B1BCB9AC1E9138A000F30050 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ViewController.storyboard; sourceTree = "<group>"; };
+		B1BCB9AF1E913C8A00F30050 /* Container.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Container.storyboard; sourceTree = "<group>"; };
+		B1BCB9B51E9144B900F30050 /* SwitchContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchContainerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,8 +146,9 @@
 		B19280931E90F85C00A5B09D /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				B1BCB9A71E91136E00F30050 /* TableView */,
-				B1BCB9A31E910CF400F30050 /* Stack */,
+				B1BCB9B31E913E8600F30050 /* TableView */,
+				B1BCB9B21E913E7E00F30050 /* Stack */,
+				B1BCB9B11E913E6F00F30050 /* ViewContraller */,
 				B19280691E90F7B200A5B09D /* Main.storyboard */,
 			);
 			name = Storyboards;
@@ -152,6 +159,7 @@
 			children = (
 				B1BCB9A81E9113D200F30050 /* TableView */,
 				B1BCB9A01E910CCD00F30050 /* Stack */,
+				B1BCB9B41E91448300F30050 /* ViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -180,22 +188,6 @@
 			path = Stack;
 			sourceTree = "<group>";
 		};
-		B1BCB9A31E910CF400F30050 /* Stack */ = {
-			isa = PBXGroup;
-			children = (
-				B1BCB99D1E910C0700F30050 /* Stack.storyboard */,
-			);
-			name = Stack;
-			sourceTree = "<group>";
-		};
-		B1BCB9A71E91136E00F30050 /* TableView */ = {
-			isa = PBXGroup;
-			children = (
-				B1BCB9A41E91136900F30050 /* TableView.storyboard */,
-			);
-			name = TableView;
-			sourceTree = "<group>";
-		};
 		B1BCB9A81E9113D200F30050 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +195,40 @@
 			);
 			path = TableView;
 			sourceTree = "<group>";
+		};
+		B1BCB9B11E913E6F00F30050 /* ViewContraller */ = {
+			isa = PBXGroup;
+			children = (
+				B1BCB9AB1E9138A000F30050 /* ViewController.storyboard */,
+				B1BCB9AF1E913C8A00F30050 /* Container.storyboard */,
+			);
+			name = ViewContraller;
+			sourceTree = "<group>";
+		};
+		B1BCB9B21E913E7E00F30050 /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				B1BCB99D1E910C0700F30050 /* Stack.storyboard */,
+			);
+			name = Stack;
+			sourceTree = "<group>";
+		};
+		B1BCB9B31E913E8600F30050 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				B1BCB9A41E91136900F30050 /* TableView.storyboard */,
+			);
+			name = TableView;
+			sourceTree = "<group>";
+		};
+		B1BCB9B41E91448300F30050 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B1BCB9B51E9144B900F30050 /* SwitchContainerViewController.swift */,
+			);
+			name = ViewController;
+			path = MyProject/Controllers/ViewController;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -317,6 +343,8 @@
 				B192806D1E90F7B200A5B09D /* Assets.xcassets in Resources */,
 				B192806B1E90F7B200A5B09D /* Main.storyboard in Resources */,
 				B1BCB9971E91087B00F30050 /* vacation_spots.plist in Resources */,
+				B1BCB9B01E913C8A00F30050 /* Container.storyboard in Resources */,
+				B1BCB9AD1E9138A000F30050 /* ViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1BCB9B61E9144B900F30050 /* SwitchContainerViewController.swift in Sources */,
 				B1BCB9A21E910CCD00F30050 /* StackHideControlViewController.swift in Sources */,
 				B1BCB9981E91087B00F30050 /* VacationSpot.swift in Sources */,
 				B1BCB9AA1E9113ED00F30050 /* TableViewCellStyleViewController.swift in Sources */,
@@ -410,6 +439,14 @@
 				B1BCB9A51E91136900F30050 /* Base */,
 			);
 			name = TableView.storyboard;
+			sourceTree = "<group>";
+		};
+		B1BCB9AB1E9138A000F30050 /* ViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1BCB9AC1E9138A000F30050 /* Base */,
+			);
+			name = ViewController.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
