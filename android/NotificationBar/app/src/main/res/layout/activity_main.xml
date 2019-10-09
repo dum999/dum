@@ -29,6 +29,12 @@
             android:text="Action"/>
 
         <Button
+            android:id="@+id/btn_dismissed_callback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dismissed Callback"/>
+
+        <Button
             android:id="@+id/btn_preprogress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

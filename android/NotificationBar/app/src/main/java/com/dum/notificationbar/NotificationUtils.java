@@ -38,7 +38,7 @@ public class NotificationUtils {
 
         // Create the notification
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
-                .setSmallIcon(R.mipmap.ic_launcher); //need for under api 26
+                .setSmallIcon(R.drawable.ic_notification); //need for under api 26
 
         return builder;
     }

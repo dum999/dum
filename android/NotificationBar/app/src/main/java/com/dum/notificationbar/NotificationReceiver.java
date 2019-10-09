@@ -10,7 +10,8 @@ public class NotificationReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        Log.d(TAG, "onReceive");
+        int requestCode = intent.getIntExtra("requestCode", 0);
+        Log.d(TAG, "onReceive - " + requestCode);
 
         int notificationId = intent.getIntExtra("notificationId", 0);
         NotificationUtils.close(context, notificationId);
