@@ -56,19 +56,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnGo = findViewById(R.id.btn_go);
-        btnGo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                go();
-            }
+        btnGo.setOnClickListener(view -> {
+            go();
         });
 
         btnCancel = findViewById(R.id.btn_cancel);
-        btnCancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                workManager.cancelUniqueWork(WORKER_NAME);
-            }
+        btnCancel.setOnClickListener(view -> {
+            workManager.cancelUniqueWork(WORKER_NAME);
         });
 
         progressBar = findViewById(R.id.progress_bar);
