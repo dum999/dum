@@ -29,16 +29,30 @@ public class MainActivity extends AppCompatActivity {
         //builder.setAutoCancel(true);
         //builder.setTimeoutAfter(0);
 
-        Button btnShow = findViewById(R.id.btn_show);
-        btnShow.setOnClickListener(view -> {
-            builder.setProgress(0, 0, false)
-                    .setOngoing(true)
-                    .setContentText("Message");
+        Button btnShowTop = findViewById(R.id.btn_show_top);
+        btnShowTop.setOnClickListener(view -> {
+            builder.setPriority(NotificationCompat.PRIORITY_HIGH);
+            NotificationUtils.notify(getBaseContext(), NOTIFICATION_ID, builder);
+        });
+        Button btnShowBackground = findViewById(R.id.btn_show_background);
+        btnShowBackground.setOnClickListener(view -> {
+            builder.setPriority(NotificationCompat.PRIORITY_LOW);
             NotificationUtils.notify(getBaseContext(), NOTIFICATION_ID, builder);
         });
 
-        Button btnAction = findViewById(R.id.btn_action);
-        btnAction.setOnClickListener(view -> {
+        Button btnOngoinOn = findViewById(R.id.btn_ongoing_on);
+        btnOngoinOn.setOnClickListener(view -> {
+            builder.setOngoing(true);
+            NotificationUtils.notify(getBaseContext(), NOTIFICATION_ID, builder);
+        });
+        Button btnOngoinOff = findViewById(R.id.btn_ongoing_off);
+        btnOngoinOff.setOnClickListener(view -> {
+            builder.setOngoing(false);
+            NotificationUtils.notify(getBaseContext(), NOTIFICATION_ID, builder);
+        });
+
+        Button btnAddAction = findViewById(R.id.btn_add_action);
+        btnAddAction.setOnClickListener(view -> {
             if (builder.mActions.isEmpty()) {
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com"));
                 PendingIntent googleIntent = PendingIntent.getActivity(getBaseContext(), 0, intent, 0);
@@ -56,7 +70,12 @@ public class MainActivity extends AppCompatActivity {
                 builder.addAction(android.R.drawable.ic_menu_call, "Stop", stopIntent);
             }
 
-            NotificationUtils.update(getBaseContext(), NOTIFICATION_ID, builder);
+            NotificationUtils.notify(getBaseContext(), NOTIFICATION_ID, builder);
+        });
+        Button btnClearAction = findViewById(R.id.btn_clear_action);
+        btnClearAction.setOnClickListener(view -> {
+            builder.mActions.clear();
+            NotificationUtils.notify(getBaseContext(), NOTIFICATION_ID, builder);
         });
 
         Button btnDismissedCallback = findViewById(R.id.btn_dismissed_callback);
@@ -65,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
             dismissedIntent.putExtra("notificationId", NOTIFICATION_ID);
             PendingIntent deleteIntent = PendingIntent.getBroadcast(getBaseContext(), 0, dismissedIntent, 0);
             builder.setDeleteIntent(deleteIntent);
-            NotificationUtils.update(getBaseContext(), NOTIFICATION_ID, builder);
+            NotificationUtils.notify(getBaseContext(), NOTIFICATION_ID, builder);
         });
 
         Button btnPreprogress = findViewById(R.id.btn_preprogress);
@@ -73,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
             builder.setProgress(0, 0, true)
                     .setOngoing(true)
                     .setContentText(null);
-            NotificationUtils.update(getBaseContext(), NOTIFICATION_ID, builder);
+            NotificationUtils.notify(getBaseContext(), NOTIFICATION_ID, builder);
         });
 
         Button btnProgress = findViewById(R.id.btn_progress);
@@ -81,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
             builder.setProgress(100, 50, false)
                     .setOngoing(true)
                     .setContentText("50/100");
-            NotificationUtils.update(getBaseContext(), NOTIFICATION_ID, builder);
+            NotificationUtils.notify(getBaseContext(), NOTIFICATION_ID, builder);
         });
 
         Button btnSuccess = findViewById(R.id.btn_success);
@@ -91,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
                     .setOngoing(false)
                     .setAutoCancel(true)
                     .setContentText("Success");
-            NotificationUtils.update(getBaseContext(), NOTIFICATION_ID, builder);
+            NotificationUtils.notify(getBaseContext(), NOTIFICATION_ID, builder);
         });
 
         Button btnClose = findViewById(R.id.btn_close);

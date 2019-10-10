@@ -38,22 +38,13 @@ public class NotificationUtils {
 
         // Create the notification
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setSmallIcon(R.drawable.ic_notification); //need for under api 26
 
         return builder;
     }
 
     public static void notify(Context context, int id, NotificationCompat.Builder builder) {
-        //builder.setDefaults(NotificationCompat.DEFAULT_ALL);
-        builder.setPriority(NotificationCompat.PRIORITY_HIGH);
-        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
-        if (notificationManager != null) {
-            notificationManager.notify(id, builder.build());;
-        }
-    }
-
-    public static void update(Context context, int id, NotificationCompat.Builder builder) {
-        builder.setPriority(NotificationCompat.PRIORITY_LOW);
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
         if (notificationManager != null) {
             notificationManager.notify(id, builder.build());;
