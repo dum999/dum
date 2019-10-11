@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
+import androidx.work.Data;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
 
@@ -19,7 +20,17 @@ public class FirstWorker extends Worker {
     public Result doWork() {
         Log.d(TAG, "First start");
 
-        WorkerUtils.sleep();
+        Data.Builder builder = new Data.Builder()
+                .putInt("max", 120);
+
+        setProgressAsync(builder.putInt("progress", 0).build());
+        WorkerUtils.sleep(1000);
+        setProgressAsync(builder.putInt("progress", 10).build());
+        WorkerUtils.sleep(1000);
+        setProgressAsync(builder.putInt("progress", 50).build());
+        WorkerUtils.sleep(1000);
+        setProgressAsync(builder.putInt("progress", 120).build());
+        WorkerUtils.sleep(1000);
 
         Log.d(TAG, "First end");
         return Result.success();

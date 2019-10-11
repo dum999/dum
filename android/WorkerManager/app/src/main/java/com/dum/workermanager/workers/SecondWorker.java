@@ -19,10 +19,11 @@ public class SecondWorker extends Worker {
     public Result doWork() {
         Log.d(TAG, "Second start");
 
-        WorkerUtils.sleep();
+        WorkerUtils.sleep(3000);
 
         Log.d(TAG, "Second end");
         return Result.success();
+        //return Result.retry();
     }
 
 }

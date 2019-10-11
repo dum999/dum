@@ -19,7 +19,7 @@ public class ThirdWorker extends Worker {
     public Result doWork() {
         Log.d(TAG, "Third start");
 
-        WorkerUtils.sleep();
+        WorkerUtils.sleep(3000);
 
         Log.d(TAG, "Third end");
         return Result.success();
