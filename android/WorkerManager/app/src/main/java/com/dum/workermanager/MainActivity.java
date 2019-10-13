@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnCancel = findViewById(R.id.btn_cancel);
         btnCancel.setOnClickListener(view -> {
-            workManager.cancelUniqueWork(WORKER_NAME);
+            cancel();
         });
 
         progressBar = findViewById(R.id.progress_bar);
@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
 
         OneTimeWorkRequest.Builder firstBuilder = new OneTimeWorkRequest.Builder(FirstWorker.class)
                 .addTag(WORKER_TAG_OUTPUT)
-                .setInitialDelay(10, TimeUnit.SECONDS);
+                .setInitialDelay(1, TimeUnit.SECONDS);
         WorkContinuation continuation = workManager.beginUniqueWork(WORKER_NAME,
                 ExistingWorkPolicy.REPLACE,
                 firstBuilder.build());
@@ -132,6 +132,10 @@ public class MainActivity extends AppCompatActivity {
         continuation = continuation.then(thirdBuilder.build());
 
         continuation.enqueue();
+    }
+
+    private void cancel() {
+        workManager.cancelUniqueWork(WORKER_NAME);
     }
 
     private void showWorkInWait() {

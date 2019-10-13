@@ -8,7 +8,7 @@ public class WorkerUtils {
 
     public static void sleep(long millis) {
         try {
-            Log.d(TAG, "sleep");
+            Log.d(TAG, "sleep - " + millis);
             Thread.sleep(millis);
         } catch (InterruptedException e) {
             Log.d(TAG, e.getMessage());

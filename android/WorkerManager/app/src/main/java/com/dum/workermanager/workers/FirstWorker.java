@@ -21,16 +21,17 @@ public class FirstWorker extends Worker {
         Log.d(TAG, "First start");
 
         Data.Builder builder = new Data.Builder()
-                .putInt("max", 120);
+                .putInt("max", 160);
 
         setProgressAsync(builder.putInt("progress", 0).build());
-        WorkerUtils.sleep(1000);
+        WorkerUtils.sleep(60000);
         setProgressAsync(builder.putInt("progress", 10).build());
-        WorkerUtils.sleep(1000);
+        WorkerUtils.sleep(60000);
         setProgressAsync(builder.putInt("progress", 50).build());
-        WorkerUtils.sleep(1000);
+        WorkerUtils.sleep(60000);
         setProgressAsync(builder.putInt("progress", 120).build());
-        WorkerUtils.sleep(1000);
+        WorkerUtils.sleep(4 * 60000);
+        setProgressAsync(builder.putInt("progress", 160).build());
 
         Log.d(TAG, "First end");
         return Result.success();
