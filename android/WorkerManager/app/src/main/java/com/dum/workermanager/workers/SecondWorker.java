@@ -7,6 +7,8 @@ import androidx.annotation.NonNull;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
 
+import com.dum.workermanager.ThisApplication;
+
 public class SecondWorker extends Worker {
     private static final String TAG = SecondWorker.class.getSimpleName();
 
@@ -18,6 +20,7 @@ public class SecondWorker extends Worker {
     @Override
     public Result doWork() {
         Log.d(TAG, "Second start");
+        Log.d(TAG, "Background - " + ThisApplication.wasInBackground);
 
         WorkerUtils.sleep(3 * 60000);
 

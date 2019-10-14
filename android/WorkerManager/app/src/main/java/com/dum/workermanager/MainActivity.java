@@ -83,8 +83,9 @@ public class MainActivity extends AppCompatActivity {
                         if (progressData != null) {
                             progress = progressData.getInt("progress", 0);
                             max = progressData.getInt("max", 0);
-
-                            Log.d(TAG, "Progress - " + progress + "/" + max);
+                            if (progress != 0 && max != 0) {
+                                Log.d(TAG, "Progress - " + progress + "/" + max);
+                            }
                         }
                         showWorkInProgress(progress, max);
                         break;
@@ -118,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
 
         OneTimeWorkRequest.Builder firstBuilder = new OneTimeWorkRequest.Builder(FirstWorker.class)
                 .addTag(WORKER_TAG_OUTPUT)
-                .setInitialDelay(1, TimeUnit.SECONDS);
+                .setInitialDelay(10, TimeUnit.SECONDS);
         WorkContinuation continuation = workManager.beginUniqueWork(WORKER_NAME,
                 ExistingWorkPolicy.REPLACE,
                 firstBuilder.build());

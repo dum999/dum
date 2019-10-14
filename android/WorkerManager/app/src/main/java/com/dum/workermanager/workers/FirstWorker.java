@@ -8,6 +8,8 @@ import androidx.work.Data;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
 
+import com.dum.workermanager.ThisApplication;
+
 public class FirstWorker extends Worker {
     private static final String TAG = FirstWorker.class.getSimpleName();
 
@@ -19,6 +21,7 @@ public class FirstWorker extends Worker {
     @Override
     public Result doWork() {
         Log.d(TAG, "First start");
+        Log.d(TAG, "Background - " + ThisApplication.wasInBackground);
 
         Data.Builder builder = new Data.Builder()
                 .putInt("max", 160);
