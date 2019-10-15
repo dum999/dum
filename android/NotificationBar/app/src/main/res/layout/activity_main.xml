@@ -24,12 +24,12 @@
                 android:id="@+id/btn_show_top"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Show Top api26+"/>
+                android:text="Show Top 26+"/>
             <Button
                 android:id="@+id/btn_show_background"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Show Background"/>
+                android:text="Show Background 26+"/>
         </LinearLayout>
 
         <LinearLayout
