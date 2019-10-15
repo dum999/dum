@@ -13,11 +13,12 @@ public class ThisApplication extends Application implements LifecycleObserver {
     private static final String TAG = ThisApplication.class.getSimpleName();
 
     private static Context appContext;
-    public static boolean wasInBackground;
+    public static boolean wasInBackground = true;
 
     @Override
     public void onCreate() {
         super.onCreate();
+        Log.d(TAG, "ThisApplication onCreate");
         appContext = this;
         ProcessLifecycleOwner.get().getLifecycle().addObserver(this);
     }
