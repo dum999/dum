@@ -1,0 +1,12 @@
+.gradle
+.DS_Store
+/build
+/captures
+/.idea
+local.properties
+*.iml
+unused.txt
+seeds.txt
+mapping.txt
+class_files.txt
+*.apk
