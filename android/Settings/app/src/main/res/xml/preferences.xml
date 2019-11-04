@@ -4,10 +4,12 @@
 
     <PreferenceCategory
         app:key="notifications_category"
+        app:iconSpaceReserved="false"
         app:title="Notifications">
 
         <SwitchPreferenceCompat
             app:key="notifications"
+            app:iconSpaceReserved="false"
             app:title="Enable message notifications"/>
 
     </PreferenceCategory>
@@ -20,6 +22,11 @@
             app:key="feedback"
             app:summary="Report technical issues or suggest new features"
             app:title="Send feedback"/>
+
+        <Preference
+            app:key="fag"
+            app:summary="Fag"
+            app:title="Fag"/>
 
     </PreferenceCategory>
 
